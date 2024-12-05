@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./stylesheet/styles.css" />
+
+    <title>Frontend Mentor | Calculator app</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="flex items-center justify-center">
+    <!-- Centered Container -->
+    <div
+      class="flex flex-col mt-4 w-[350px] sm:w-[500px] md:2-[600px] lg:w-[700px] xl:w-[800px]"
+    >
+      <div class="flex justify-end gap-2 pr-[3px] number-count">
+        <span class="font-semibold text-[20px]">1</span>
+        <span class="font-semibold text-[20px]">2</span>
+        <span class="font-semibold text-[20px]">3</span>
+      </div>
+      <!-- Header Starts Here -->
+      <div class="flex items-center justify-between">
+        <h3 class="text-2xl font-bold calc">Calc</h3>
+        <div class="flex gap-2">
+          <p class="theme">Theme</p>
+
+          <div class="container">
+            <button class="toggle-button" id="toggleButton">
+              <span class="toggle-indicator"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Header Ends Here -->
+
+      <input
+        type="text"
+        id="calculate-input"
+        class="p-4 mt-4 text-3xl rounded-lg outline-none text-end"
+      />
+
+      <!-- Calculator Body -->
+      <div class="p-6 mt-4 rounded-lg shadow-lg calculator-body">
+        <!-- Number Inputs Container -->
+        <div class="grid grid-cols-4 gap-3 mt-3 text-center calculator-keys">
+          <input
+            type="button"
+            class="px-5 py-1 text-2xl font-bold border-b-4 rounded-lg calc-button"
+            value="7"
+          />
+          <input
+            type="button"
+            class="px-5 py-1 text-2xl font-bold border-b-4 rounded-lg calc-button"
+            value="8"
+          />
+          <input
+            type="button"
+            class="px-5 py-1 text-2xl font-bold border-b-4 rounded-lg calc-button"
+            value="9"
+          />
+          <input
+            type="button"
+            class="py-1 text-2xl font-bold text-white border-b-4 rounded-lg calc-button delete-button"
+            value="DEL"
+            data-action="delete"
+          />
+          <input
+            type="button"
+            class="py-1 text-2xl font-bold border-b-4 rounded-lg calc-button"
+            value="4"
+          />
+          <input
+            type="button"
+            class="py-1 text-2xl font-bold border-b-4 rounded-lg calc-button"
+            value="5"
+          />
+          <input
+            type="button"
+            class="py-1 text-2xl font-bold border-b-4 rounded-lg calc-button"
+            value="6"
+          />
+          <input
+            type="button"
+            class="py-1 text-2xl font-bold border-b-4 rounded-lg calc-button"
+            value="+"
+            data-action="addition"
+          />
+          <input
+            type="button"
+            class="py-1 text-2xl font-bold border-b-4 rounded-lg calc-button"
+            value="1"
+          />
+          <input
+            type="button"
+            class="py-1 text-2xl font-bold border-b-4 rounded-lg calc-button"
+            value="2"
+          />
+          <input
+            type="button"
+            class="py-1 text-2xl font-bold border-b-4 rounded-lg calc-button"
+            value="3"
+          />
+          <input
+            type="button"
+            class="py-1 text-2xl font-bold border-b-4 rounded-lg calc-button"
+            value="-"
+            data-action="subtract"
+          />
+          <input
+            type="button"
+            class="py-1 text-2xl font-bold border-b-4 rounded-lg calc-button"
+            value="."
+            data-action="decimal"
+          />
+          <input
+            type="button"
+            class="py-1 text-2xl font-bold border-b-4 rounded-lg calc-button"
+            value="0"
+          />
+          <input
+            type="button"
+            class="py-1 text-2xl font-bold border-b-4 rounded-lg calc-button"
+            value="÷"
+            data-action="divide"
+          />
+          <input
+            type="button"
+            class="py-1 text-2xl font-bold border-b-4 rounded-lg calc-button multiply"
+            value="x"
+            data-action="multiply"
+          />
+          <input
+            type="button"
+            class="col-span-2 py-1 text-2xl font-bold text-white border-b-4 rounded-lg calc-button reset-button"
+            value="RESET"
+            data-action="reset"
+          />
+          <input
+            type="button"
+            class="col-span-2 py-1 text-2xl font-bold border-b-4 rounded-lg calc-button evaluate-button"
+            value="="
+            data-action="calculate"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script src="./scripts/app.js"></script>
+  </body>
+</html>

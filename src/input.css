@@ -1,0 +1,317 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+:root {
+  --main-bg: hsl(222, 26%, 31%);
+  --toggleBg: hsl(223, 31%, 20%);
+  --screenBg: hsl(224, 36%, 15%);
+  --keyBg: hsl(225, 21%, 49%);
+  --keyShadow: hsl(224, 28%, 35%);
+  --keyBgToggle: hsl(6, 63%, 50%);
+  --keyShadowRed: hsl(6, 70%, 34%);
+  --grayishKeyBg: hsl(30, 25%, 89%);
+  --grayishKeyShadow: hsl(28, 16%, 65%);
+  --grayishBlue: hsl(221, 14%, 31%);
+  --lightGray: hsl(0, 0%, 90%);
+  --grayishRed: hsl(0, 5%, 81%);
+  --veryLightGray: hsl(0, 0%, 93%);
+  --darkCyan: hsl(185, 42%, 37%);
+  --veryDarkCyan: hsl(185, 58%, 25%);
+  --orangeToggle: hsl(25, 98%, 40%);
+  --grayishYellow: hsl(60, 10%, 19%);
+  --darkViolet: hsl(268, 75%, 9%);
+  --veryDarkViolet: hsl(268, 71%, 12%);
+  --darkVioletKey: hsl(281, 89%, 26%);
+  --vividMagenta: hsl(285, 91%, 52%);
+  --pureCyan: hsl(176, 100%, 44%);
+  --softCyan: hsl(177, 92%, 70%);
+  --veryDarkCyanKey: hsl(268, 47%, 21%);
+  --darkMagentaKeyShadow: hsl(290, 70%, 36%);
+}
+
+body {
+  background: var(--main-bg);
+  transition: all 1s;
+}
+
+.number-count {
+  color: white;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-button {
+  position: relative;
+  width: 60px;
+  height: 20px;
+  background: var(--grayishBlue);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s;
+}
+
+.toggle-indicator {
+  width: 14px;
+  height: 14px;
+  background-color: var(--keyBgToggle);
+  border-radius: 50%;
+  position: absolute;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* .toggle-button.theme-1 .toggle-indicator {
+  transform: translateX(0);
+}
+
+.toggle-button.theme-2 .toggle-indicator {
+  transform: translateX(23px);
+}
+
+.toggle-button.theme-3 .toggle-indicator {
+  transform: translateX(45px);
+} */
+
+.calc,
+.theme {
+  color: white;
+}
+
+#calculate-input {
+  background: var(--screenBg);
+  color: white;
+}
+
+.calculator-body {
+  background: var(--screenBg);
+}
+
+.calc-button {
+  color: #808080d3;
+  background: lightgray;
+  border-bottom: solid 1px #d4d1d1;
+}
+
+.calc-button:active {
+  background: gray;
+  color: white;
+}
+
+.evaluate-button {
+  background: red;
+  border-bottom: solid 1px #d83b3b;
+  color: white;
+}
+
+.evaluate-button:active {
+  background: white;
+  color: red;
+}
+
+.reset-button,
+.delete-button {
+  color: white;
+  border-bottom: solid 1px #e4dcdcb2;
+  background: var(--keyBg);
+}
+
+body.white-theme {
+  background: whitesmoke;
+
+  .number-count {
+    color: var(--darkViolet);
+  }
+
+  .toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .toggle-button {
+    position: relative;
+    width: 60px;
+    height: 20px;
+    background: whitesmoke;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+  }
+
+  .toggle-indicator {
+    width: 14px;
+    height: 14px;
+    background-color: var(--keyBgToggle);
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* .toggle-button.theme-1 .toggle-indicator {
+    transform: translateX(0);
+  }
+
+  .toggle-button.theme-2 .toggle-indicator {
+    transform: translateX(23px);
+  }
+
+  .toggle-button.theme-3 .toggle-indicator {
+    transform: translateX(45px);
+  } */
+
+  .calc,
+  .theme {
+    color: var(--darkViolet);
+  }
+
+  #calculate-input {
+    background: var(--lightGray);
+    color: var(--darkViolet);
+  }
+
+  .calculator-body {
+    background: var(--grayishKeyBg);
+  }
+
+  .calc-button {
+    color: #808080d3;
+    background: lightgray;
+    border-bottom: solid 1px #d4d1d1;
+  }
+  .calc-button:active {
+    background: #808080d3;
+    color: lightgray;
+  }
+
+  .evaluate-button {
+    background: orange;
+    border-bottom: solid 1px #d83b3b;
+    color: white;
+  }
+
+  .evaluate-button:active {
+    background: white;
+    color: orange;
+  }
+
+  .reset-button,
+  .delete-button {
+    color: white;
+    border-bottom: solid 1px #e4dcdcb2;
+    background: var(--keyBg);
+  }
+}
+
+body.purple-theme {
+  background: var(--veryDarkViolet);
+  color: orange;
+
+  .toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .toggle-button {
+    position: relative;
+    width: 60px;
+    height: 20px;
+    background: var(--darkViolet);
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+  }
+
+  .toggle-indicator {
+    width: 14px;
+    height: 14px;
+    background-color: var(--softCyan);
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  /* .toggle-button.theme-1 .toggle-indicator {
+    transform: translateX(0);
+  }
+
+  .toggle-button.theme-2 .toggle-indicator {
+    transform: translateX(23px);
+  }
+
+  .toggle-button.theme-3 .toggle-indicator {
+    transform: translateX(45px);
+  } */
+
+  .number-count {
+    color: orange;
+  }
+
+  .calc,
+  .theme {
+    color: orange;
+  }
+
+  #calculate-input {
+    background: var(--darkViolet);
+    color: yellow;
+  }
+
+  .calculator-body {
+    background: var(--darkViolet);
+  }
+
+  .number-count {
+    color: orange;
+  }
+
+  .calc-button {
+    color: white;
+    background: var(--darkVioletKey);
+    border-bottom: solid 1px #d4d1d1;
+  }
+
+  .calc-button:active {
+    background: whitesmoke;
+    color: var(--darkVioletKey);
+  }
+
+  .evaluate-button {
+    background: var(--pureCyan);
+    border-bottom: solid 1px var(--softCyan);
+    color: white;
+  }
+  .reset-button,
+  .delete-button {
+    color: white;
+    border-bottom: solid 1px #e4dcdcb2;
+    background: var(--vividMagenta);
+  }
+}

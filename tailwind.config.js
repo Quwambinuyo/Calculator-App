@@ -1,0 +1,43 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./**/*.html"],
+  safelist: ["purple-theme", "white-theme"],
+  theme: {
+    screens: {
+      sm: "480px",
+      md: "768px",
+      lg: "976px",
+      xl: "1440px",
+    },
+    extend: {
+      colors: {
+        mainBg: "hsl(222, 26%, 31%)",
+        toggleBg: "hsl(223, 31%, 20%)",
+        screenBg: "hsl(224, 36%, 15%)",
+        keyBg: "hsl(225, 21%, 49%)",
+        keyShadow: "hsl(224, 28%, 35%)",
+        keyBgToggle: "hsl(6, 63%, 50%)",
+        keyShadowRed: " hsl(6, 70%, 34%)",
+        grayishKeyBg: " hsl(30, 25%, 89%)",
+        grayishKeyShadow: "hsl(28, 16%, 65%)",
+        grayishBlue: " hsl(221, 14%, 31%)",
+        lightGray: "hsl(0, 0%, 90%)",
+        grayishRed: "hsl(0, 5%, 81%)",
+        veryLightGray: "hsl(0, 0%, 93%)",
+        darkCyan: "hsl(185, 42%, 37%)",
+        veryDarkCyan: "hsl(185, 58%, 25%)",
+        orangeToggle: " hsl(25, 98%, 40%)",
+        grayishYellow: "hsl(60, 10%, 19%)",
+        darkViolet: " hsl(268, 75%, 9%)",
+        veryDarkViolet: " hsl(268, 71%, 12%)",
+        darkVioletKey: "  hsl(281, 89%, 26%)",
+        vividMagenta: " hsl(285, 91%, 52%)",
+        pureCyan: "hsl(176, 100%, 44%)",
+        softCyan: " hsl(177, 92%, 70%)",
+        veryDarkCyanKey: "hsl(268, 47%, 21%)",
+        darkMagentaKeyShadow: "hsl(290, 70%, 36%)",
+      },
+    },
+  },
+  plugins: [],
+};
